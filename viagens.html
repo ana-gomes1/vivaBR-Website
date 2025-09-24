@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>vivaBR - Seu site de viagem</title>
+	<link rel="stylesheet" type="text/css" href="estilos/viagens.css">
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+
+<body>
+	<header>
+
+		<!--Gradiente do cabeçalho-->
+		<div class="gradiente">
+		</div>
+
+		<!--Hamburguer/menu-responsivo-->
+
+		<button class="mobile-menu">
+			<div class="line1" id="linha"></div>
+			<div class="line2" id="linha"></div>
+			<div class="line3" id="linha"></div>
+		</button>
+
+		<!--Logo do site-->
+
+		<div class="logo">
+			<a href="index.html"><img src="imagens/logo/logo.png"></a>
+		</div>
+
+		<div class="space"></div>
+
+		<!--Barra de navegação-->
+		<nav class="nav nav-mobile">
+			<ul class="nav-list">
+				<li><a href="regioes.html">Regiões</a></li>
+				<li><a href="viagens.html">Viagens</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="quem-somos.html">Quem somos</a></li>
+			</ul>
+		</nav>
+
+
+		<!--Login/cadastro e busca-->
+		<div class="login">
+			<div class="image-links">
+				<div class="display icons">
+					<a href="login.html"><img src="imagens/login/profile.png"></a>
+				</div>
+
+				<div class="display icons text">
+					<a href="login.html">Login</a>
+				</div>
+
+				<div class="display line">
+					<img src="imagens/login/line.png" class="line">
+				</div>
+
+				<div class="display icons">
+					<a href="busca.html"><img src="imagens/login/lupa.png"></a>
+				</div>
+			</div>
+		</div>
+		
+		<!--------Botão do Dark mode--------->
+		<div class="darkmode">
+			<input type="checkbox" class="checkbox" id="chk">
+			<label class="label" for="chk">
+				<i class="fa-solid fa-moon"></i>
+				<i class="fa-solid fa-sun"></i>
+				<div class="ball"></div>
+			</label>
+		</div>
+
+	</header>
+
+	<!----- Banner principal    ---->
+	<main>
+		<div class="banner">
+		</div>
+		<div class="txt-banner"><p>Desperte seu espírito aventureiro.</p></div>
+	</main>
+
+	<!--Primeira seção-->
+		
+
+
+	<!---Segunda seção--->
+	<section>
+		<div class="secao2">
+			<h1>Dicas de Viagens</h1>
+        <p>Descubra segredos para viajar com inteligência e aproveitar cada momento!</p>
+			<div class="imagem">
+				
+			</div>
+			<p >Antes de viajar fique atento nessa dicas:</p>
+		</div>
+
+	</section>
+
+	<main>
+ <!-- Seção com as dicas -->
+ <section class="dicas-content">
+	<article class="dica-item">
+	  <img src="imagens/dicas/dicas.jpg" alt="Planejamento">
+	  <div class="dica-texto">
+		<h2>Planeje Seu Roteiro</h2>
+		<p>Pesquise sobre o destino, crie um itinerário e programe suas atividades para ter o máximo aproveitamento.</p>
+	  </div>
+	</article>
+
+	<article class="dica-item">
+	  <img src="imagens/dicas/economize.png" alt="Economize">
+	  <div class="dica-texto">
+		<h2>Reserve com Antecedência</h2>
+		<p>Compras antecipadas de passagens e hospedagens podem render descontos e deixar seu roteiro mais tranquilo.</p>
+	  </div>
+	</article>
+
+	<article class="dica-item">
+	  <img src="imagens/dicas/cultura.jpg" alt="Cultura Local">
+	  <div class="dica-texto">
+		<h2>Explore a Cultura Local</h2>
+		<p>Experimente a culinária, visite feiras e troque experiências com os locais para viver o destino intensamente.</p>
+	  </div>
+	</article>
+
+	<article class="dica-item">
+	  <img src="imagens/dicas/seguranca.jpg" alt="Segurança">
+	  <div class="dica-texto">
+		<h2>Cuide da Sua Segurança</h2>
+		<p>Mantenha seus documentos e pertences seguros e esteja atento às recomendações do destino para evitar imprevistos.</p>
+	  </div>
+	</article>
+  </section>
+</main>
+	
+
+	<!----Rodapé---->
+	<footer>
+		<div class="logo-rodape">
+			<a href="index.html"><img src="imagens/logo/logo.png"></a>
+		</div>
+		<div class="nav-list-footer">
+			<ul>
+				<li><a href="regioes.html">Regiões</a></li>
+				<li><a href="viagens.html">Viagens</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="quem-somos.html">Quem somos</a></li>
+			</ul>
+		</div>
+		<div class="txt-footer">
+			<p>© vivaBR 2025</p>
+		</div>
+	</footer>
+
+	<!--Javascript-->
+	<script src="js/darkMode.js"></script>
+	<script src="js/hamburguer.js"></script>
+</body>
+</html>

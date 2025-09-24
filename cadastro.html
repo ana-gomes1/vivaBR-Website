@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./estilos/estilo-cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+
+<div class="container">
+    <header>
+		<div class="gradiente">
+		</div>
+
+		<!--Hamburguer/menu-responsivo-->
+		<button class="mobile-menu">
+			<div class="line1" id="linha"></div>
+			<div class="line2" id="linha"></div>
+			<div class="line3" id="linha"></div>
+		</button>
+
+		<div class="logo">
+			<a href="index.html" class="home">vivaBR - Home</a>
+			<a href="index.html"><img src="imagens/logo/logo.png"></a>
+		</div>
+
+		<nav class="nav">
+			<ul class="nav-list">
+				<li><a href="regioes.html">Regiões</a></li>
+				<li><a href="viagens.html">Viagens</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="quem-somos.html">Quem somos</a></li>
+			</ul>
+		</nav>
+
+		<div class="login">
+			<div class="image-links">
+				<div class="display icons">
+					<a href="login.html"><img src="imagens/login/profile.png"></a>
+				</div>
+
+				<div class="display icons text">
+					<a href="login.html">Login</a>
+				</div>
+
+				<div class="display line">
+					<img src="imagens/login/line.png" class="line">
+				</div>
+
+				<div class="display icons">
+					<a href="busca.html"><img src="imagens/login/lupa.png"></a>
+				</div>
+			</div>
+		</div>
+
+        <div class="dark-mode">
+			<input type="checkbox" class="checkbox" id="chk">
+			<label class="label" for="chk">
+				<i class="fa-solid fa-moon"></i>
+				<i class="fa-solid fa-sun"></i>
+				<div class="ball"></div>
+			</label>
+		</div>
+	</header>
+
+    <section class="conteudo">
+    <main id="form_container">
+    <div id="form_header">
+        <h1 id="form_title">Criar Conta</h1>
+        <button class="btn-default">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+	</div>
+
+	<div class="user-cadastrado">
+		<p>Usuário Cadastrado com Sucesso!</p>
+	</div>
+
+	<form id="cadastroForm" method="post" action="inserir_usuarios.php"> 
+		<div id="input_container">
+			
+			<div class="input-box">
+				<label for="name" class="form-label">Nome</label>
+				<div class="input-field">
+					<input type="text" name="name" id="nome" class="form-control" placeholder="Fulano de Tal" required>
+					<i class="fa-solid fa-user"></i>
+				</div>
+			</div>
+	
+			<div class="input-box">
+				<label for="user" class="form-label">Login</label>
+				<div class="input-field">
+					<input type="text" name="user" id="login" class="form-control" placeholder="fulano123" required >
+					<i class="fa-solid fa-user"></i>
+				</div>
+			</div>
+
+			<div class="input-box">
+				<label for="birthdate" class="form-label">Nascimento</label>
+				<div class="input-field">
+					<input type="date" name="birthdate" id="birthdate" class="form-control" required>
+				</div>
+			</div>
+			
+			<div class="input-box">
+				<label for="email" class="form-label">E-mail</label>
+				<div class="input-field">
+					<input type="email" name="email" id="email" class="form-control" placeholder="fulano123@gmail.com" required>
+					<i class="fa-solid fa-envelope"></i>
+				</div>
+			</div>
+	
+
+			
+			<div class="input-box">
+				<label for="password" class="form-label">Senha</label>
+				<div class="input-field">
+					<input type="password" name="password" id="senha" minlength="8" class="form-control" placeholder="********" required>
+					<i class="fa-solid fa-eye-slash password-icon"></i>
+				</div>
+				<span class="error"></span>
+			</div>
+
+
+			<div class="input-box">
+				<label for="confirm_password" class="form-label">Confirmar senha</label>
+				<div class="input-field">
+					<input type="password" id="confirm_password" minlength="8" class="form-control" placeholder="********" required>
+					<i class="fa-solid fa-eye-slash password-icon"></i>
+				</div>
+				<span class="error"></span>
+			</div>
+
+			<div class="input-box">
+				<label for="telefone" class="form-label">Telefone</label>
+				<div class="input-field">
+					<input type="text" name="telefone" id="telefone" class="form-control"  title="O telefone precisa ter 11 dígitos" placeholder="(00)00000-0000" required>
+					<i class="fa-solid fa-phone"></i>
+				</div>
+			</div>
+			<div class="input-box">
+				<label for="cpf" class="form-label">CPF</label>
+				<div class="input-field">
+					<input type="text" name="cpf" id="cpf" class="form-control"  title="O CPF precisa ter 11 dígitos" placeholder="000.000.000-00" required>
+					<i class="fa-regular fa-id-card"></i>
+				</div>
+			</div>
+			<div class="input-box">
+				<label for="cep" class="form-label">CEP</label>
+				<div class="input-field">
+					<input type="text" name="cep" id="cep" class="form-control"  title="Digite um CEP com 8 números" placeholder="00000-000" required>
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+			</div>
+			<div class="input-box">
+				<label for="rua" class="form-label">Rua</label>
+				<div class="input-field">
+					<input type="text" name="rua" id="rua" class="form-control" placeholder="Rua dos Sonhos" required>
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+			</div>
+			<div class="input-box">
+				<label for="bairro" class="form-label">Bairro</label>
+				<div class="input-field">
+					<input type="text" name="bairro" id="bairro" class="form-control" placeholder="Campo Grande" required>
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+			</div>
+			<div class="input-box">
+				<label for="cidade" class="form-label">Cidade</label>
+				<div class="input-field">
+					<input type="text" name="cidade" id="cidade" class="form-control" placeholder="Rio de Janeiro" required>
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+			</div>
+			<div class="input-box">
+				<label for="estado" class="form-label">Estado</label>
+				<div class="input-field">
+					<input type="text" name="estado" id="estado" class="form-control" placeholder="Rj" required>
+					<i class="fa-solid fa-location-dot"></i>
+				</div>
+			</div>
+			<!--
+			<div class="radio-container">
+				<label class="form-label">Gênero</label>
+				<div id="gender_inputs">
+					<div class="radio-box">
+						<input type="radio" name="gender" id="female" class="form-control" value="female" required>
+						<label for="female" class="form-label">Feminino</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" name="gender" id="male" class="form-control" value="male" required>
+						<label for="male" class="form-label">Masculino</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" name="gender" id="other" class="form-control" value="other" required>
+						<label for="other" class="form-label">Outro</label>
+					</div>
+				</div>
+			</div>
+			-->
+		</div>
+		<button type="submit" id="criar" class="btn-default-cadastrar">
+			<i class="fa-solid fa-check"></i>Criar conta
+		</button>
+	</form>
+    </main>
+    </section>
+
+    <footer>
+		<div class="logo-rodape">
+			<a src="index.html"><img src="imagens/logo/logo.png"></a>
+		</div>
+		<div class="nav-list-footer">
+			<ul>
+				<li><a href="regioes.html">Regiões</a></li>
+				<li><a href="viagens.html">Viagens</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="quem-somos.html">Quem somos</a></li>
+			</ul>
+		</div>
+		<div class="txt-footer">
+			<p>© vivaBR 2025</p>
+		</div>
+	</footer>
+</div>
+<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+<script src="js/funcoes.js"></script>
+<script src="js/darkMode.js"></script>
+<script src="js/hamburguer.js"></script>
+    
+</body>
+</html>
