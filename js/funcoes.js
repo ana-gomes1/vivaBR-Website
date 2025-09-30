@@ -20,50 +20,30 @@ $('#cep').blur(function () {
     });
 });
 
-if (botao !== null){
-botao.addEventListener("click", (event) => {
-    let senha = document.getElementById("senha").value;
-    if (senha != confirm_password.value){
-        event.preventDefault();
-        alert("As senhas não correspondem. Por favor, verifique.");
-    } 
-    else{
-        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-            let login = document.getElementById("login").value;
-            let email = document.getElementById("email").value;
-            let cpf = document.getElementById('cpf').value;
+const form = document.getElementById("cadastroForm");
 
-		    if (!validaCPF(cpf)) {
-			    event.preventDefault();
-			    alert('CPF inválido. Verifique o número digitado.');
-			    document.getElementById("cpf").focus();
-		    } 
-            
-            else{
-                 if (login && senha && email) {
-                var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-                
-                usuarios.push({ 
-                    login: login, 
-                    senha: senha, 
-                    email: email 
-                });
-                
-                localStorage.setItem("usuarios", JSON.stringify(usuarios));
-                
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                document.querySelector('.user-cadastrado').style.display = 'flex';
-                
-                setTimeout( function userCadastrado() {
-                    window.location.href = "../trabalho-sitevivaBR nono/login.html"
-                }, 3000);
-                } 
-            }    
-        });
-    };
-});
-};
+if (form !== null) {
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const senha = document.getElementById("senha").value;
+        const confirmSenha = document.getElementById("confirm_password").value;
+        const cpf = document.getElementById("cpf").value;
+
+        if (senha !== confirmSenha) {
+            alert("As senhas não correspondem. Por favor, verifique.");
+            return;
+        }
+
+        if (!validaCPF(cpf)) {
+            alert("CPF inválido. Verifique o número digitado.");
+            document.getElementById("cpf").focus();
+            return;
+        }
+
+        form.submit();
+    });
+}
 
 function logarUsuario(event){
     const loginInput = document.querySelector('#login');
@@ -117,11 +97,16 @@ function validaCPF(cpf) {
 	return true;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const msgSuccess = document.getElementById("msgSuccess");
+    if (msgSuccess) {
+        setTimeout(() => msgSuccess.remove(), 5000);
+    }
+});
 
-$('#telefone').mask('(00) 0000-00000');
+$('#telefone').mask('(00) 00000-0000');
 $('#cep').mask('00000-000');
 $('#cpf').mask('000.000.000-00', {reverse: true});
-
 
 
 
