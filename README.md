@@ -5,7 +5,7 @@ O projeto vivaBR tem como objetivo o desenvolvimento de um site voltado para o s
 A proposta contempla a apresentação de atrativos turísticos, dados culturais e históricos, bem como orientações práticas relacionadas a hospedagem, transporte e roteiros de viagem. Além disso, o site busca oferecer dicas e recomendações que possam auxiliar o usuário na tomada de decisão, contribuindo para um planejamento mais eficiente e enriquecedor da experiência turística. 
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/49035b9c-e058-46b7-9ccc-0b4d51aa19bc" height="500px">
+  <img src="https://github.com/user-attachments/assets/49035b9c-e058-46b7-9ccc-0b4d51aa19bc" height="400px">
 </div>
 
 
