@@ -11,7 +11,7 @@ A proposta contempla a apresentação de atrativos turísticos, dados culturais 
 
 # Funções
 
-- **Usabilidade e experiência do usuário**: Foco em um design intuitivo e organizado(UI/UX design)
+- **Usabilidade e experiência do usuário**: Foco em um design intuitivo e organizado (UI/UX design)
 - **Cadastro de usuários e login**: Cadastro com validação de dados e login 
 - **Navegabilidade**: Exibição de telas de diferentes nichos (Quem somos, regiões, viagens, etc.)
 - **Gerenciar dados**: Sistema com gerenciamento de clientes, reservas, voos, etc.
@@ -24,7 +24,7 @@ A proposta contempla a apresentação de atrativos turísticos, dados culturais 
 - **JavaScript**: Validação de dados e interatividade das páginas web
 
 #### Back-end
-- PHP: Lógica do cadastro e login de usuuários, além da dinamicidade
+- PHP: Lógica do cadastro e login de usuários, além da dinamicidade
 - MySQL: Armazenamento e gerenciamento dos dados
 
 # Como Rodar o Projeto
