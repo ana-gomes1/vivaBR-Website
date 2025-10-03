@@ -18,13 +18,12 @@ session_start();
     ?>
     <div class="sucessMsg" id="msgSuccess">
         <div>
-            <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="48px" fill="#319631"><path d="M480-80q-85 0-158-30.5T195-195q-54-54-84.5-127T80-480q0-84 30.5-157T195-764q54-54 127-85t158-31q75 0 140 24t117 66l-43 43q-44-35-98-54t-116-19q-145 0-242.5 97.5T140-480q0 145 97.5 242.5T480-140q145 0 242.5-97.5T820-480q0-30-4.5-58.5T802-594l46-46q16 37 24 77t8 83q0 85-31 158t-85 127q-54 54-127 84.5T480-80Zm-59-218L256-464l45-45 120 120 414-414 46 45-460 460Z"/></svg>
             <?= $_SESSION['msg']; ?>
         </div>
     </div>
         <?php unset($_SESSION['msg']); ?>
     <?php 
-        }
+    	}
     ?>
 	
 <div class="container">
@@ -142,17 +141,34 @@ session_start();
     </section>
 
     <footer>
-		<div class="logo-rodape">
-			<a src="index.html"><img src="imagens/logo/logo.png"></a>
+		
+		<div class="footer">
+			<div class="logo-rodape">
+				<a href="#"><img src="imagens/logo/logo.png"></a>
+			</div>
+			
+			<div class="nav-list-footer">
+				<ul>
+					<li><a href="#">Regiões</a></li>
+					<li><a href="#">Viagens</a></li>
+					<li><a href="#">Quiz</a></li>
+					<li><a href="#">Quem somos</a></li>
+				</ul>
+		
+				<div class="contact">
+					<div class="">
+						<h1 class="">Contato</h1>
+						<div class="icons-rodape">
+							<a href=""><i class="fa-brands fa-instagram text-3xl"></i></a>
+							<a href=""><i class="fa-brands fa-github text-3xl"></i></a>
+							<a href=""><i class="fa-brands fa-linkedin text-3xl"></i></a>
+							<a href=""><i class="fa-brands fa-whatsapp text-3xl"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="nav-list-footer">
-			<ul>
-				<li><a href="regioes.html">Regiões</a></li>
-				<li><a href="viagens.html">Viagens</a></li>
-				<li><a href="quiz.html">Quiz</a></li>
-				<li><a href="quem-somos.html">Quem somos</a></li>
-			</ul>
-		</div>
+
 		<div class="txt-footer">
 			<p>© vivaBR 2025</p>
 		</div>
