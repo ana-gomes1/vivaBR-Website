@@ -17,11 +17,12 @@
     $bairro = $_POST['bairro'];
     $cidade = $_POST['cidade'];
     $estado = $_POST['estado'];
+    $genero = $_POST['gender'];
 
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO tb_usuarios (login, senha, nome, dt_nasc, email, cpf, telefone, cep, rua, bairro, cidade, estado)
-            VALUES ( '$login', '$senhaHash', '$nome', '$nascimento', '$email', '$cpf', '$telefone', '$cep', '$rua', '$bairro', '$cidade', '$estado')";
+    $sql = "INSERT INTO tb_usuarios (login, senha, nome, dt_nasc, email, cpf, telefone, cep, rua, bairro, cidade, estado, genero)
+            VALUES ( '$login', '$senhaHash', '$nome', '$nascimento', '$email', '$cpf', '$telefone', '$cep', '$rua', '$bairro', '$cidade', '$estado', '$genero')";
 
     $consulta = $conexao->query("SELECT email FROM tb_usuarios WHERE email='$email'");
     $exibe = $consulta->fetch_assoc();

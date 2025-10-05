@@ -45,17 +45,6 @@ if (form !== null) {
     });
 }
 
-function logarUsuario(event){
-    const loginInput = document.querySelector('#login');
-    const emailInput = document.querySelector('#email');
-    const senhaInput = document.querySelector('#password');
-    
-    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-    const login = loginInput.value.trim();
-    const email = emailInput.value.trim();
-    const senha = senhaInput.value;
-};
 
 
 function validaCPF(cpf) {

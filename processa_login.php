@@ -47,11 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: quiz.php');
             exit;
         } else {
+            $_SESSION['msgErrorlogin'] = 'Nome/email ou senha incorretos. Digite novamente';
             header('Location: login.php');
         }
     } else {
-        echo "<p>Usuário não encontrado.</p>";
-        echo "<a href='login.html'>Voltar</a>";
+        $_SESSION['msgErrorlogin'] = 'Nome/email ou senha incorretos. Digite novamente';
+        header('Location: login.php');
     }
 
     $stmt->close();

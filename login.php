@@ -57,11 +57,11 @@ session_start();
 		<div class="login">
 			<div class="image-links">
 				<div class="display icons" id="profile-pic">
-					<a href="login.html"><img src="imagens/login/profile.png"></a>
+					<a href="login.php"><img src="imagens/login/profile.png"></a>
 				</div>
 
 				<div class="display icons text">
-					<a href="login.html" id="texto-login">Login</a>
+					<a href="login.php" id="texto-login">Login</a>
 				</div>
 
 				<div class="display line">
@@ -101,10 +101,13 @@ session_start();
             <i class="fa-solid fa-right-to-bracket"></i>
         </button>
     </div>
-	<?php  ?>
-	<div class="erro">
-		<p>Nome/email ou senha incorretos. Digite novamente</p>
-	</div>
+	<?php if(!empty($_SESSION['msgErrorlogin'])){ ?>
+		<div class="erro">
+			<p><?= $_SESSION['msgErrorlogin']; ?></p>
+		</div>
+	<?php 
+		unset($_SESSION['msgErrorlogin']);
+	}?>
 
         <form id="loginForm" action="processa_login.php" method="post">
             <div id="input_container">
