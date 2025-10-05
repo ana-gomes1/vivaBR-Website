@@ -1,6 +1,6 @@
 # Website vivaBR - Site de Viagens
 
-O projeto vivaBR tem como objetivo o desenvolvimento de um site voltado para o segmento de turismo, com a finalidade de disponibilizar informações organizadas e acessíveis sobre diferentes destinos nacionais, além da compra e venda de passagens aéreas para viajar. 
+O projeto vivaBR tem como objetivo o desenvolvimento de um site voltado para o segmento de turismo, com a finalidade de disponibilizar informações organizadas e acessíveis sobre diferentes destinos nacionais. 
 
 A proposta contempla a apresentação de atrativos turísticos, dados culturais e históricos, bem como orientações práticas relacionadas a hospedagem, transporte e roteiros de viagem. Além disso, o site busca oferecer dicas e recomendações que possam auxiliar o usuário na tomada de decisão, contribuindo para um planejamento mais eficiente e enriquecedor da experiência turística. 
 
@@ -14,7 +14,7 @@ A proposta contempla a apresentação de atrativos turísticos, dados culturais 
 - **Usabilidade e experiência do usuário**: Foco em um design intuitivo e organizado (UI/UX design)
 - **Cadastro de usuários e login**: Cadastro com validação de dados e login 
 - **Navegabilidade**: Exibição de telas de diferentes nichos (Quem somos, regiões, viagens, etc.)
-- **Gerenciar dados**: Sistema com gerenciamento de clientes, reservas, voos, etc.
+- **Gerenciar dados**: Sistema com gerenciamento de clientes, cupons, etc.
 
 # Tecnologias e Ferramentas utilizadas
 
