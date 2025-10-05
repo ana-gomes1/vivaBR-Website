@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -100,12 +101,12 @@ session_start();
             <i class="fa-solid fa-right-to-bracket"></i>
         </button>
     </div>
-
+	<?php  ?>
 	<div class="erro">
 		<p>Nome/email ou senha incorretos. Digite novamente</p>
 	</div>
 
-        <form id="loginForm">
+        <form id="loginForm" action="processa_login.php" method="post">
             <div id="input_container">
                 <div class="input-box">
                     <label for="login" class="form-label">Nome de login</label>

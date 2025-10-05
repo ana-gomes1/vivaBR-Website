@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
+	exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +16,21 @@
     <link rel="stylesheet" href="estilos/estilo-quiz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <title>Quiz</title>
+		<style>
+			.btnLogout{
+				display: flex;
+				background: #fff;
+				padding: 7px;
+				color: #245687;
+				border-radius: 5px;
+
+				input{
+					cursor: pointer;
+					border: 0px;
+					font-weight: 600;
+				}
+			}
+		</style>
 </head>
 <body>
 <div class="container">
@@ -33,19 +58,26 @@
 				<li><a href="viagens.html">Viagens</a></li>
 				<li><a href="quiz.html">Quiz</a></li>
 				<li><a href="quem-somos.html">Quem somos</a></li>
+				<li>
+					<a href="logout.php" class="btnLogout">
+  						<input class="btnLogout" type="button" value="SAIR">
+						<i class="fa-solid fa-right-from-bracket"></i>
+					</a>
+				</li>
 			</ul>
 		</nav>
         
 		<div class="login">
             <div class="image-links">
-                <div class="display icons">
-                    <a href="login.html"><img src="imagens/login/profile.png"></a>
+
+				<div class="display icons">
+					<a href="login.php"><img src="imagens/login/profile.png"></a>
 				</div>
-                
+				
 				<div class="display icons text">
-                    <a href="login.html">Login</a>
+					<a href="login.php">Login</a>
 				</div>
-                
+
 				<div class="display line">
 					<img src="imagens/login/line.png" class="line">
 				</div>

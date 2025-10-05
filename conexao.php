@@ -1,9 +1,9 @@
 <?php
 	// Configurações de conexão com o MySQL
-	$servidor = "localhost:4306";  // geralmente localhost no XAMPP
-	$usuario  = "root";       // usuário padrão do MySQL no XAMPP
-	$senha    = "";           // senha padrão é vazia, a não ser que você tenha alterado
-	$banco    = "db_vivabr"; // nome do seu banco de dados
+	$servidor = "localhost";
+	$usuario  = "root";      
+	$senha    = "";           
+	$banco    = "db_vivabr"; 
 
 	// Criando a conexão
 	$conexao = new mysqli($servidor, $usuario, $senha, $banco);

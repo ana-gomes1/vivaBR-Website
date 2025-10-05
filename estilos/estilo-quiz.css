@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
@@ -223,7 +225,21 @@ header .logo{
 }
 
 
+.btnLogout{
+	display: flex;
+	background: #fff;
+	padding: 7px;
+	color: #245687;
+	border-radius: 5px;
+	font-family: 'Inter', sans-serif;
+	align-items: center;
 
+	input{
+		cursor: pointer;
+		border: 0px;
+		font-weight: 600;
+	}
+}
 
 
 body{
@@ -245,6 +261,7 @@ main{
     flex: 1;
     margin-bottom: 10rem;
     border-radius: 8px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .app h1{

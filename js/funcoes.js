@@ -55,23 +55,6 @@ function logarUsuario(event){
     const login = loginInput.value.trim();
     const email = emailInput.value.trim();
     const senha = senhaInput.value;
-
-    const userValid = usuarios.find(user =>
-        (login === user.login && email === user.email && senha === user.senha ));
-
-        if (userValid) {
-            let token = Math.random().toString(16).substring(2);
-            localStorage.setItem('token',token);
-            localStorage.setItem('userLogado', JSON.stringify(userValid));
-
-            event.preventDefault();
-            window.location.href = "../trabalho-sitevivaBR nono/quiz.html";
-        } 
-        
-        else {
-            document.querySelector('.erro').style.display = 'flex';
-            event.preventDefault();
-        }
 };
 
 

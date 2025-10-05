@@ -27,8 +27,8 @@
     $exibe = $consulta->fetch_assoc();
 
     if($consulta->num_rows > 0){
-        $_SESSION['msg'] = '';
-        $_SESSION['msg'] .= "Você já possui uma conta com este email. Faça login para entrar";
+        $_SESSION['msg'] = '<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#BB271A"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>';
+        $_SESSION['msg'] .= "Já existe uma conta com este email. Tente outro email";
         header("Location: login.php");
     }else{
 
@@ -45,46 +45,5 @@
     http_response_code(405);
     echo "Método não permitido!";
 }
-/*
 
-include 'conexao.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    // Captura e validação básica dos dados
-    $nome       = $_POST['name'] ?? '';
-    $login      = $_POST['user'] ?? '';
-    $email      = $_POST['email'] ?? '';
-    $nascimento = $_POST['birthdate'] ?? '';
-    $senha      = $_POST['password'] ?? '';
-    $telefone   = $_POST['telefone'] ?? '';
-    $cpf        = $_POST['cpf'] ?? '';
-    $cep        = $_POST['cep'] ?? '';
-    $rua        = $_POST['rua'] ?? '';
-    $bairro     = $_POST['bairro'] ?? '';
-    $cidade     = $_POST['cidade'] ?? '';
-    $estado     = $_POST['estado'] ?? '';
-
-	$senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-
-    // Preparar e executar o INSERT usando Prepared Statement
-    $stmt = $conexao->prepare("INSERT INTO tb_usuarios (nome, login, email, dt_nasc, senha, telefone, cpf, cep, rua, bairro, cidade, estado)
-                               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssssssss", $nome, $login, $email, $nascimento, $senhaHash, $telefone, $cpf, $cep, $rua, $bairro, $cidade, $estado);
-
-    if ($stmt->execute()) {
-        header('Location: login.html');
-		exit;
-    } else {
-        echo "Erro ao cadastrar: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $conexao->close();
-
-} else {
-    http_response_code(405); // Método não permitido
-    echo "Método não permitido!";
-}
-*/
 ?>

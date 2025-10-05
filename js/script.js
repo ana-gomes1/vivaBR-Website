@@ -235,18 +235,12 @@ nextButton.addEventListener("click",() =>{
         startQuiz();
     }
 })
- 
 
-function logadoOuNao(){
-    const usuariologado = JSON.parse(localStorage.getItem('userLogado'));
-    
-    if (usuariologado == null){
-        document.querySelector('.app').style.visibility = 'hidden'
-        alert("Faça login ou crie uma conta para acessar o quiz e ganhar desocntos respondendo a perguntas!");
-        window.location.href("../trabalho")
-    } else{
-        startQuiz();
+startQuiz();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const msgProfile = document.getElementById("msgSuccess");
+    if (msgProfile) {
+        document.getElementById("profile-menu").style.display = 'hidden';
     }
-}
-
-logadoOuNao()
+});
