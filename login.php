@@ -49,7 +49,7 @@ session_start();
 			<ul class="nav-list">
 				<li><a href="regioes.html">Regiões</a></li>
 				<li><a href="viagens.html">Viagens</a></li>
-				<li><a href="quiz.html">Quiz</a></li>
+				<li><a href="quiz.php">Quiz</a></li>
 				<li><a href="quem-somos.html">Quem somos</a></li>
 			</ul>
 		</nav>
