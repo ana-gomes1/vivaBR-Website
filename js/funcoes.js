@@ -45,17 +45,45 @@ if (form !== null) {
     });
 }
 
-function logarUsuario(event){
-    const loginInput = document.querySelector('#login');
-    const emailInput = document.querySelector('#email');
-    const senhaInput = document.querySelector('#password');
-    
-    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+const formUser = document.getElementById("cadastroUserForm");
 
-    const login = loginInput.value.trim();
-    const email = emailInput.value.trim();
-    const senha = senhaInput.value;
-};
+if (formUser !== null) {
+    formUser.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const senha = document.getElementById("senha").value;
+        const confirmSenha = document.getElementById("confirm_password").value;
+        const cpf = document.getElementById("cpf").value;
+
+        if (senha !== confirmSenha) {
+            alert("As senhas não correspondem. Por favor, verifique.");
+            return;
+        }
+
+        if (!validaCPF(cpf)) {
+            alert("CPF inválido. Verifique o número digitado.");
+            document.getElementById("cpf").focus();
+            return;
+        }
+
+        formUser.submit();
+        window.location.href = "home_adm.php";
+    });
+}
+
+const codigo = document.getElementById("cod");
+
+function gerarCodigo(tamanho) {
+  const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let resultado = '';
+  const caracteresLength = caracteres.length;
+  for (let i = 0; i < tamanho; i++) {
+    resultado += caracteres.charAt(Math.floor(Math.random() * caracteresLength));
+  }
+  return resultado;
+}
+
+codigo.value = gerarCodigo(10);
 
 
 function validaCPF(cpf) {
@@ -80,16 +108,15 @@ function validaCPF(cpf) {
 	return true;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const msgSuccess = document.getElementById("msgSuccess");
-    if (msgSuccess) {
-        setTimeout(() => msgSuccess.remove(), 5000);
-    }
-});
 
 $('#telefone').mask('(00) 00000-0000');
 $('#cep').mask('00000-000');
 $('#cpf').mask('000.000.000-00', {reverse: true});
 
-
+document.addEventListener("DOMContentLoaded", () => {
+        const msgSuccess = document.getElementById("msgSuccess");
+        if (msgSuccess) {
+            setTimeout(() => msgSuccess.remove(), 5000);
+        }
+    });
 

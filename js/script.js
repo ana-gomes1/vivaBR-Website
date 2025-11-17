@@ -214,6 +214,12 @@ function showScore(){
     if(score == 12){
          document.querySelector('.cupom5').style.display = 'flex';
     }
+
+    fetch("salvar_resultado.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `acertos=${score}&total=${questions.length}`
+        })
 }
 
 

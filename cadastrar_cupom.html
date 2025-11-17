@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./estilos/estilo-cadastro.css">
+    <title>Cadastrar Cupom</title>
+</head>
+<body>
+
+
+    <section class="conteudo">
+    <main id="form_container">
+    <div id="form_header">
+        <h1 id="form_title">Cadastrar Cupom</h1>
+		<a href="login.php">
+			<button class="btn-default">
+				<i class="fa-solid fa-right-to-bracket"></i>
+			</button>
+		</a>
+	</div>
+
+
+	<form id="cadastroCupom" method="post" action="inserir_cupons.php"> 
+		<div id="input_container">
+			
+			<div class="input-box">
+				<label for="name" class="form-label">Código</label>
+				<div class="input-field">
+					<input type="text" name="cod" id="cod" class="form-control" readonly>
+					<i class="fa-solid fa-qrcode"></i>
+				</div>
+			</div>
+
+			<div class="radio-container">
+				<label class="form-label">Tipo de desconto</label>
+				<div id="gender_inputs">
+					<div class="radio-box">
+						<input type="radio" name="tipo" id="percentual" class="form-control" value="percentual" required>
+						<label for="percentual" class="form-label">Percentual</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" name="tipo" id="fixo" class="form-control" value="fixo" required>
+						<label for="fixo" class="form-label">Fixo</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="input-box">
+				<label for="data_fim" class="form-label">Data de fim</label>
+				<div class="input-field">
+					<input type="date" name="data_fim" id="data_fim" class="form-control" required>
+				</div>
+			</div>
+
+			<div class="input-box">
+				<label for="criado_em" class="form-label">Criado em</label>
+				<div class="input-field">
+					<input type="date" name="criado_em" id="criado_em" class="form-control" required>
+				</div>
+			</div>
+			
+			<div class="input-box">
+				<label for="descricao" class="form-label">Descrição</label>
+				<div class="">
+					<textarea class="bg-white text-(--font-primary) rounded-xl w-full" id="descricao" name="descricao"></textarea>
+				</div>
+			</div>
+	
+
+			
+			<div class="input-box">
+				<label for="password" class="form-label">Valor</label>
+				<div class="input-field">
+					<input type="text" name="valor" id="valor" class="form-control" placeholder="Ex.: R$ 5,00 ou 5%" required>
+					<i class="fa-solid fa-eye-slash password-icon"></i>
+				</div>
+				<p class="text-(--fnt-color) text-[0.8rem]">* Em relação ao tipo de desconto</p>
+				<span class="error"></span>
+			</div>
+
+			<input type="hidden" name="origem" value="cadastroCupom.html">
+			
+
+		</div>
+		<button type="submit" id="criar" class="btn-default-cadastrar">
+			<i class="fa-solid fa-check"></i>Criar cupom
+		</button>
+	</form>
+    </main>
+    </section>
+
+
+<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+<script src="js/funcoes.js"></script>
+<script src="js/darkMode.js"></script>
+<script src="js/hamburguer.js"></script>
+    
+</body>
+</html>

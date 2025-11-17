@@ -1,10 +1,14 @@
 <?php
 session_start();
 
+include ("sessao.php");
+
 if (!isset($_SESSION['usuario'])) {
-    header("Location: login.php");
+	header('Location: login.php');
 	exit;
 }
+
+print_r($_SESSION);
 
 ?>
 
@@ -14,23 +18,9 @@ if (!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilo-quiz.css">
+	<link rel="stylesheet" href="estilos/componentMenuProfile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <title>Quiz</title>
-		<style>
-			.btnLogout{
-				display: flex;
-				background: #fff;
-				padding: 7px;
-				color: #245687;
-				border-radius: 5px;
-
-				input{
-					cursor: pointer;
-					border: 0px;
-					font-weight: 600;
-				}
-			}
-		</style>
 </head>
 <body>
 <div class="container">
@@ -48,46 +38,21 @@ if (!isset($_SESSION['usuario'])) {
 
         
 		<div class="logo">
-			<a href="index.html" class="home">vivaBR - Home</a>
-            <a href="index.html"><img src="imagens/logo/logo.png"></a>
+			<a href="index.php" class="home">vivaBR - Home</a>
+            <a href="index.php"><img src="imagens/logo/logo.png"></a>
 		</div>
         
 		<nav class="nav">
             <ul class="nav-list">
-                <li><a href="regioes.html">Regiões</a></li>
-				<li><a href="viagens.html">Viagens</a></li>
-				<li><a href="quiz.html">Quiz</a></li>
-				<li><a href="quem-somos.html">Quem somos</a></li>
-				<li>
-					<a href="logout.php" class="btnLogout">
-  						<input class="btnLogout" type="button" value="SAIR">
-						<i class="fa-solid fa-right-from-bracket"></i>
-					</a>
-				</li>
+                <li><a href="regioes.php">Regiões</a></li>
+				<li><a href="viagens.php">Viagens</a></li>
+				<li><a href="quiz.php">Quiz</a></li>
+				<li><a href="quem-somos.php">Quem somos</a></li>
 			</ul>
 		</nav>
-        
-		<div class="login">
-            <div class="image-links">
 
-				<div class="display icons">
-					<a href="login.php"><img src="imagens/login/profile.png"></a>
-				</div>
-				
-				<div class="display icons text">
-					<a href="login.php">Login</a>
-				</div>
-
-				<div class="display line">
-					<img src="imagens/login/line.png" class="line">
-				</div>
-
-				<div class="display icons">
-					<a href="busca.html"><img src="imagens/login/lupa.png"></a>
-				</div>
-			</div>
-		</div>
-
+		<?php exibirMenuProfile(); ?>
+		
         <div class="dark-mode">
 			<input type="checkbox" class="checkbox" id="chk">
 			<label class="label" for="chk">
@@ -144,23 +109,23 @@ if (!isset($_SESSION['usuario'])) {
 		
 		<div class="footer">
 			<div class="logo-rodape">
-				<a href="#"><img src="imagens/logo/logo.png"></a>
+				<a href="index.php"><img src="imagens/logo/logo.png"></a>
 			</div>
 			
 			<div class="nav-list-footer">
 				<ul>
-					<li><a href="#">Regiões</a></li>
-					<li><a href="#">Viagens</a></li>
-					<li><a href="#">Quiz</a></li>
-					<li><a href="#">Quem somos</a></li>
+					<li><a href="regioes.php">Regiões</a></li>
+					<li><a href="viagens.php">Viagens</a></li>
+					<li><a href="quiz.php">Quiz</a></li>
+					<li><a href="quem-somos.php">Quem somos</a></li>
 				</ul>
 		
 				<div class="contact">
 					<div class="">
 						<h1 class="">Contato</h1>
 						<div class="icons-rodape">
-							<a href=""><i class="fa-brands fa-instagram text-3xl"></i></a>
-							<a href=""><i class="fa-brands fa-github text-3xl"></i></a>
+							<a href="https://www.instagram.com/viva.br2025/" target="_blank"><i class="fa-brands fa-instagram text-3xl"></i></a>
+							<a href="https://github.com/ana-gomes1/vivaBR-Website" target="_blank"><i class="fa-brands fa-github text-3xl"></i></a>
 							<a href=""><i class="fa-brands fa-linkedin text-3xl"></i></a>
 							<a href=""><i class="fa-brands fa-whatsapp text-3xl"></i></a>
 						</div>
@@ -174,7 +139,6 @@ if (!isset($_SESSION['usuario'])) {
 		</div>
 	</footer>
 </div>
-	
     <script src="js/script.js"></script>
     <script src="js/darkMode.js"></script>
 	<script src="js/hamburguer.js"></script>

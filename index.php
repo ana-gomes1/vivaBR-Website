@@ -1,0 +1,217 @@
+<?php
+session_start();
+
+include ("sessao.php");
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>vivaBR - Seu site de viagem</title>
+	<link rel="stylesheet" type="text/css" href="estilos/style.css">
+	<link rel="stylesheet" href="estilos/componentMenuProfile.css">
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+
+<body>
+	<header>
+
+		<!--Gradiente do cabeçalho-->
+		<div class="gradiente">
+		</div>
+
+		<!--Hamburguer/menu-responsivo-->
+
+		<button class="mobile-menu">
+			<div class="line1" id="linha"></div>
+			<div class="line2" id="linha"></div>
+			<div class="line3" id="linha"></div>
+		</button>
+
+		<!--Logo do site-->
+
+		<div class="logo">
+			<a href="index.php" class="home">vivaBR - Home</a>
+			<a href="index.php"><img src="imagens/logo/logo.png"></a>
+		</div>
+
+		<div class="space"></div>
+
+		<!--Barra de navegação-->
+		<nav class="nav nav-mobile">
+			<ul class="nav-list">
+				<li><a href="regioes.php">Regiões</a></li>
+				<li><a href="viagens.php">Viagens</a></li>
+				<li><a href="quiz.php">Quiz</a></li>
+				<li><a href="quem-somos.php">Quem somos</a></li>
+			</ul>
+		</nav>
+
+
+		<!--Login/perfil-->
+		<?php exibirMenuProfile(); ?>
+		
+		<!--------Botão do Dark mode--------->
+		<div class="darkmode">
+			<input type="checkbox" class="checkbox" id="chk">
+			<label class="label" for="chk">
+				<i class="fa-solid fa-moon"></i>
+				<i class="fa-solid fa-sun"></i>
+				<div class="ball"></div>
+			</label>
+		</div>
+
+	</header>
+
+	<!----- Banner principal    ---->
+	<main>
+		<div class="banner">
+		</div>
+		<div class="txt-banner"><p>Seu site de viagens e descontos</p></div>
+	</main>
+
+	<!--Primeira seção-->
+		<div class="informativo-group">
+
+			<div class="informativo-item">
+				<img src="imagens/informativo/icon1.png"></img>
+				<h3>Passagens</h3>
+				<p>Aqui você pode ganhar descontos e outros benefícios, para aproveitar ainda mais seus passseios.</p>
+			</div>
+
+			<div class="informativo-item">
+				<img src="imagens/informativo/icon2.png"></img>
+				<h3>Viajar</h3>
+				<p>Iremos te ajudar com dicas de viagens para você não ficar perdido durante sua viagem!</p>
+			</div>
+
+			<div class="informativo-item">
+				<img src="imagens/informativo/icon3.png"></img>
+				<h3>Destinos</h3>
+				<p>Nós te ajudamos a encontrar a viagem que é a sua cara. Assim, você não vai se arrepender!</p>
+			</div>
+
+			<div class="informativo-item">
+				<img src="imagens/informativo/icon4.png"></img>
+				<h3>Experiências</h3>
+				<p>Para melhorar ainda mais sua experiência de viagem, auxiliamos com dicas práticas!</p>
+			</div>
+		</div>
+
+
+	<!---Segunda seção--->
+	<section>
+
+		<div class="sec-2">
+			
+			<div class="secao2">
+				<div class="sec2-txt">
+					<h1>Chegou o seu momento de decolar</h1>
+					<p>Chegou a hora de sair do chão, e se lançar ao novo, para de viver novas experiências e conhecer lugares incrivéis!</p>
+					<div>
+						<a href="login.php">
+							<button>
+								INSCREVA-SE <i class="fa-solid fa-arrow-right"></i>
+							</button>
+						</a>
+
+						<a href="regioes.php">
+							<button class="btn-2">
+								CONHEÇA <i class="fa-solid fa-arrow-right"></i>
+							</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="imagem">
+					<img src="imagens/forma.png" alt="">
+				</div>
+				
+			</div>
+		</div>
+		
+
+	</section>
+
+	<!---Terceira seção--->
+	<section class="secao3">
+		<div class="title-cont">
+			<p>Conheça o que o Brasil tem de melhor!</p>
+		</div>
+
+		<div class="image-sec-group">
+			<div class="image-sec">
+				<a href="regioes.php"><img src="imagens/section-home/image-sec1.jpg" alt="Rio de Janeiro"></a>
+
+				<a href="regioes.php"><p>Conheça cidades e pontos turísticos das regiões que você quiser</p></a>
+			</div>
+
+			<div class="image-sec">
+				<a href="viagens.php"><img src="imagens/section-home/image-sec2.jpg" alt="Gramado"></a>
+
+				<a href="viagens.php"><p>Veja dicas de viagens para aproveitar seus passeios ao máximo</p></a>
+			</div>
+		</div>
+		
+		<div class="image-sec-group">
+			<div class="image-sec">
+				<a href="#"><img src="imagens/section-home/image-sec3.jpg" alt="Rio de Janeiro"></a>
+
+				<a href="#"><p>Teste seus conhecimentos e aprenda mais sobre o Brasil</p></a>
+			</div>
+
+			<div class="image-sec">
+				<a href="a href="#""><img src="imagens/section-home/image-sec4.jpg" alt="Gramado"></a>
+
+				<a href="a href="#""><p>Saiba mais sobre a nossa história e os nossos objetivos</p></a>
+			</div>
+		</div>	
+
+	</section>
+
+	<!----Rodapé---->
+	<footer>
+		
+		<div class="footer">
+			<div class="logo-rodape">
+				<a href="index.php"><img src="imagens/logo/logo.png"></a>
+			</div>
+			
+			<div class="nav-list-footer">
+				<ul>
+					<li><a href="regioes.php">Regiões</a></li>
+					<li><a href="viagens.php">Viagens</a></li>
+					<li><a href="quiz.php">Quiz</a></li>
+					<li><a href="quem-somos.php">Quem somos</a></li>
+				</ul>
+		
+				<div class="contact">
+					<div class="">
+						<h1 class="">Contato</h1>
+						<div class="icons-rodape">
+							<a href="https://www.instagram.com/viva.br2025/" target="_blank"><i class="fa-brands fa-instagram text-3xl"></i></a>
+							<a href="https://github.com/ana-gomes1/vivaBR-Website" target="_blank"><i class="fa-brands fa-github text-3xl"></i></a>
+							<a href=""><i class="fa-brands fa-linkedin text-3xl"></i></a>
+							<a href=""><i class="fa-brands fa-whatsapp text-3xl"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="txt-footer">
+			<p>© vivaBR 2025</p>
+		</div>
+	</footer>
+
+	<!--Javascript-->
+	<script src="js/darkMode.js"></script>
+	<script src="js/hamburguer.js"></script>
+	<script src="https://example.com/fontawesome/v7.0.0/js/fontawesome.js" data-auto-replace-svg="nest"></script>
+</body>
+</html>

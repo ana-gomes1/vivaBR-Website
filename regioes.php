@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+include ("sessao.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>vivaBR - Seu site de viagem</title>
 	<link rel="stylesheet" type="text/css" href="./estilos/regioes.css">
+  <link rel="stylesheet" href="estilos/componentMenuProfile.css">
 	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 </head>
@@ -27,7 +35,7 @@
 		<!--Logo do site-->
 
 		<div class="logo">
-			<a href="index.html"><img src="imagens/logo/logo.png"></a>
+			<a href="index.php"><img src="imagens/logo/logo.png"></a>
 		</div>
 
 		<div class="space"></div>
@@ -35,34 +43,15 @@
 		<!--Barra de navegação-->
 		<nav class="nav nav-mobile">
 			<ul class="nav-list">
-				<li><a href="regioes.html">Regiões</a></li>
-				<li><a href="viagens.html">Viagens</a></li>
-				<li><a href="quiz.html">Quiz</a></li>
-				<li><a href="quem-somos.html">Quem somos</a></li>
+				<li><a href="regioes.php">Regiões</a></li>
+				<li><a href="viagens.php">Viagens</a></li>
+				<li><a href="quiz.php">Quiz</a></li>
+				<li><a href="quem-somos.php">Quem somos</a></li>
 			</ul>
 		</nav>
 
 
-		<!--Login/cadastro e busca-->
-		<div class="login">
-			<div class="image-links">
-				<div class="display icons">
-					<a href="login.html"><img src="imagens/login/profile.png"></a>
-				</div>
-
-				<div class="display icons text">
-					<a href="login.html">Login</a>
-				</div>
-
-				<div class="display line">
-					<img src="imagens/login/line.png" class="line">
-				</div>
-
-				<div class="display icons">
-					<a href="busca.html"><img src="imagens/login/lupa.png"></a>
-				</div>
-			</div>
-		</div>
+		<?php exibirMenuProfile(); ?>
 		
 		<!--------Botão do Dark mode--------->
 		<div class="darkmode">
@@ -425,23 +414,23 @@
 		
 		<div class="footer">
 			<div class="logo-rodape">
-				<a href="#"><img src="imagens/logo/logo.png"></a>
+				<a href="index.php"><img src="imagens/logo/logo.png"></a>
 			</div>
 			
 			<div class="nav-list-footer">
 				<ul>
-					<li><a href="#">Regiões</a></li>
-					<li><a href="#">Viagens</a></li>
-					<li><a href="#">Quiz</a></li>
-					<li><a href="#">Quem somos</a></li>
+					<li><a href="regioes.php">Regiões</a></li>
+					<li><a href="viagens.php">Viagens</a></li>
+					<li><a href="quiz.php">Quiz</a></li>
+					<li><a href="quem-somos.php">Quem somos</a></li>
 				</ul>
 		
 				<div class="contact">
 					<div class="">
 						<h1 class="">Contato</h1>
 						<div class="icons-rodape">
-							<a href=""><i class="fa-brands fa-instagram text-3xl"></i></a>
-							<a href=""><i class="fa-brands fa-github text-3xl"></i></a>
+							<a href="https://www.instagram.com/viva.br2025/" target="_blank"><i class="fa-brands fa-instagram text-3xl"></i></a>
+							<a href="https://github.com/ana-gomes1/vivaBR-Website" target="_blank"><i class="fa-brands fa-github text-3xl"></i></a>
 							<a href=""><i class="fa-brands fa-linkedin text-3xl"></i></a>
 							<a href=""><i class="fa-brands fa-whatsapp text-3xl"></i></a>
 						</div>

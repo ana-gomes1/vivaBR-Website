@@ -11,6 +11,13 @@ $('.menu-item').click((e) => {
     $($(e.currentTarget).attr('title')).addClass('secao-ativa');
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+        const msgSuccess = document.getElementById("msgSuccess");
+        if (msgSuccess) {
+            setTimeout(() => msgSuccess.remove(), 5000);
+        }
+});
+
 
 
 

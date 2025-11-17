@@ -25,3 +25,10 @@ btn.querySelectorAll('div').forEach((line, idx) => {
     });
 });
 
+const btnProfile = document.getElementById('btnProfile')
+		const btnLogout = document.getElementById('profileMenu')
+
+		btnProfile.addEventListener('click', () => {
+			btnLogout.classList.toggle('ativo');
+});
+

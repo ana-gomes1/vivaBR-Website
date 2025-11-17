@@ -408,7 +408,7 @@ footer{
 	display: flex;
 	width: 40%;
 	justify-content: between;
-	height: 25px;
+	height: auto;
 	flex-direction: column;
 
 
@@ -416,7 +416,6 @@ footer{
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
-		flex-wrap: wrap;
 
 		li{
 			display: flex;
@@ -425,6 +424,25 @@ footer{
 
 		}
 	}
+}
+
+@media screen and (max-width: 900px){
+	.footer{
+		width: 100%;
+		justify-content: space-evenly;
+	}
+
+	.nav-list-footer ul{
+		flex-direction: column;
+		align-items: start;
+	}
+}
+
+@media screen and (max-width: 1216.98px){
+	.footer{
+		width: 100%;
+	}
+
 }
 
 
@@ -440,7 +458,6 @@ footer{
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 3px;
-		width: 70%;
 
 		h1{
 			width: 40%;
@@ -450,10 +467,16 @@ footer{
 		.icons-rodape{
 			display: grid;
 			place-items: center;
-			gap: 4px;
+			gap: 20px;
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 			font-size: 2rem;
 		}
+	}
+}
+
+@media screen and (max-width: 900px){
+	.contact div{
+		flex-wrap: wrap;
 	}
 }
 

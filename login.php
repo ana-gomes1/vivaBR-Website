@@ -1,13 +1,17 @@
 <?php
 session_start();
 
+include ("sessao.php");
+
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+	<link rel="stylesheet" href="estilos/componentMenuProfile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="estilos/estilo-login.css">
     <title>Login</title>
 
@@ -41,38 +45,21 @@ session_start();
 		</button>
 
 		<div class="logo">
-			<a href="index.html" class="home">vivaBR - Home</a>
-			<a href="index.html"><img src="imagens/logo/logo.png"></a>
+			<a href="index.php" class="home">vivaBR - Home</a>
+			<a href="index.php"><img src="imagens/logo/logo.png"></a>
 		</div>
 
 		<nav class="nav">
 			<ul class="nav-list">
-				<li><a href="regioes.html">Regiões</a></li>
-				<li><a href="viagens.html">Viagens</a></li>
-				<li><a href="quiz.html">Quiz</a></li>
-				<li><a href="quem-somos.html">Quem somos</a></li>
+				<li><a href="regioes.php">Regiões</a></li>
+				<li><a href="viagens.php">Viagens</a></li>
+				<li><a href="quiz.php">Quiz</a></li>
+				<li><a href="quem-somos.php">Quem somos</a></li>
 			</ul>
 		</nav>
 
-		<div class="login">
-			<div class="image-links">
-				<div class="display icons" id="profile-pic">
-					<a href="login.html"><img src="imagens/login/profile.png"></a>
-				</div>
-
-				<div class="display icons text">
-					<a href="login.html" id="texto-login">Login</a>
-				</div>
-
-				<div class="display line">
-					<img src="imagens/login/line.png" class="line">
-				</div>
-
-				<div class="display icons">
-					<a href="busca.html"><img src="imagens/login/lupa.png"></a>
-				</div>
-			</div>
-		</div>
+		<!--Login/cadastrO-->
+		<?php exibirMenuProfile(); ?>
 
         <div class="dark-mode">
 			<input type="checkbox" class="checkbox" id="chk">
@@ -101,10 +88,13 @@ session_start();
             <i class="fa-solid fa-right-to-bracket"></i>
         </button>
     </div>
-	<?php  ?>
-	<div class="erro">
-		<p>Nome/email ou senha incorretos. Digite novamente</p>
-	</div>
+	<?php if(!empty($_SESSION['msgErrorlogin'])){ ?>
+		<div class="erro">
+			<p><?= $_SESSION['msgErrorlogin']; ?></p>
+		</div>
+	<?php 
+		unset($_SESSION['msgErrorlogin']);
+	}?>
 
         <form id="loginForm" action="processa_login.php" method="post">
             <div id="input_container">
@@ -133,7 +123,7 @@ session_start();
             </div>
             <button class="btn-default" onclick="logarUsuario(event)"><i class="fa-solid fa-check"></i>Logar</button>
 			<div class="cadastrese">
-				<p>Ainda não tem uma conta? Crie a sua agora mesmo. <a href="cadastro.html">Criar Conta</a></p>
+				<p>Ainda não tem uma conta? Crie a sua agora mesmo. <a href="cadastro.php">Criar Conta</a></p>
 			</div>
         </form>
     
@@ -182,4 +172,5 @@ session_start();
 	<script src="js/hamburguer.js"></script>
 
 </body>
+
 </html>
